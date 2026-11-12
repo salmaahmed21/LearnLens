@@ -1,99 +1,132 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>Start - choose a view · LearnLens</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,'Segoe UI',Arial,sans-serif;color:#1F2A37;background:#F5F7F8;font-size:13px;line-height:1.45;width:1280px}
-.app{display:flex;width:1280px;min-height:832px}
-.side{width:224px;background:#fff;border-right:1px solid #E4E9EC;padding:18px 14px;display:flex;flex-direction:column;flex:none}
-.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;margin-bottom:22px;padding-left:4px}
-.brand .lg{width:30px;height:30px;border-radius:8px;background:#1E5E57;display:flex;align-items:center;justify-content:center}
-.navlabel{font-size:10px;letter-spacing:.7px;color:#7A8592;font-weight:600;margin:0 0 8px 6px}
-.nav a{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;color:#3D4855;text-decoration:none;font-size:13px;margin-bottom:2px}
-.nav a.on{background:#E6F1EF;color:#14504A;font-weight:600}
-.side .foot{margin-top:auto;font-size:12px;color:#5B6675;display:flex;gap:8px;align-items:center;padding:8px 6px}
-.main{flex:1;display:flex;flex-direction:column;min-width:0}
-.top{height:56px;background:#fff;border-bottom:1px solid #E4E9EC;display:flex;align-items:center;padding:0 28px;gap:12px}
-.crumb{font-size:12.5px;color:#6B7684;display:flex;align-items:center;gap:6px}
-.crumb b{color:#1F2A37;font-weight:600}
-.top .r{margin-left:auto;display:flex;align-items:center;gap:18px}
-.bell{display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3D4855;position:relative}
-.dot{position:absolute;left:10px;top:-3px;width:8px;height:8px;border-radius:50%;background:#C2410C;border:2px solid #fff}
-.who{display:flex;align-items:center;gap:9px}
-.av{width:32px;height:32px;border-radius:50%;background:#DDEDEA;color:#14504A;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center}
-.who .n{font-weight:600;font-size:12.5px;line-height:1.2}.who .s{font-size:11px;color:#6B7684}
-.page{padding:26px 28px 32px}
-h1{font-size:24px;font-weight:700;letter-spacing:-.2px}
-.sub{color:#5B6675;margin-top:4px;font-size:13px}
-.card{background:#fff;border:1px solid #E4E9EC;border-radius:12px;padding:18px}
-.row{display:flex;gap:16px}
-.col{display:flex;flex-direction:column;gap:16px}
-.h2{font-size:15px;font-weight:650;display:flex;align-items:center;gap:8px}
-.muted{color:#6B7684}.small{font-size:11.5px}
-.btn{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:8px;font-weight:600;font-size:13px;border:1px solid transparent;white-space:nowrap}
-.btn.p{background:#1E5E57;color:#fff}
-.btn.s{background:#fff;color:#1F2A37;border-color:#D3DAE0}
-.btn.g{background:transparent;color:#14504A;padding:0 8px}
-.btn.d{background:#fff;color:#9F2D20;border-color:#E9C9C3}
-.chip{display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;border-radius:11px;font-size:11px;font-weight:600}
-.c-teal{background:#E6F1EF;color:#14504A}.c-amber{background:#FDF1DC;color:#8A5300}
-.c-red{background:#FBE7E3;color:#9F2D20}.c-grey{background:#EEF1F4;color:#4B5563}.c-blue{background:#E6EEFB;color:#244E99}
-.steps{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #E4E9EC;border-radius:10px;padding:10px 16px;font-size:12px;color:#5B6675;margin:18px 0}
-.steps .st{display:flex;align-items:center;gap:6px}.steps .st.done{color:#14504A;font-weight:600}.steps .st.now{color:#1F2A37;font-weight:700}
-.steps .ln{flex:1;height:1px;background:#DDE3E8}
-.tabs{display:flex;gap:6px}
-.tab{height:30px;padding:0 11px;border:1px solid #D3DAE0;border-radius:7px;display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;background:#fff}
-.tab.on{background:#E6F1EF;border-color:#1E5E57;color:#14504A}
-.lbl{font-size:11px;font-weight:600;color:#6B7684;letter-spacing:.3px;text-transform:uppercase;margin-bottom:5px}
-.box{border:1px solid #E4E9EC;border-radius:10px;padding:12px 14px;background:#FAFBFC}
-.hand{font-family:'Segoe Print','Comic Sans MS',cursive;font-size:17px;color:#2B3A55}
-.scan{background:#FBF8EF;border:1px solid #E9E2CC;border-radius:8px;padding:14px 16px}
-.kpi{flex:1}.kpi .v{font-size:26px;font-weight:700;margin-top:4px;letter-spacing:-.3px}.kpi .t{font-size:12px;color:#5B6675}
-table{width:100%;border-collapse:collapse;font-size:12.5px}
-th{text-align:left;font-size:11px;color:#6B7684;font-weight:600;padding:8px 10px;border-bottom:1px solid #E4E9EC;letter-spacing:.2px}
-td{padding:11px 10px;border-bottom:1px solid #EEF1F4;vertical-align:middle}
-.ta{width:100%;border:1px solid #CBD3DA;border-radius:8px;padding:10px 12px;font-size:13px;min-height:74px;background:#fff;color:#1F2A37}
-.field{display:flex;align-items:center;gap:8px}
-.inp{height:40px;border:1px solid #CBD3DA;border-radius:8px;display:flex;align-items:center;padding:0 12px;background:#fff;font-size:13px}
-.overlay{width:480px;background:#fff;border-radius:14px;border:1px solid #E4E9EC;box-shadow:0 18px 50px rgba(15,30,40,.18);padding:22px}
-.npanel{width:380px;background:#fff;border-radius:12px;border:1px solid #E4E9EC;box-shadow:0 18px 50px rgba(15,30,40,.16);overflow:hidden}
-.nitem{display:flex;gap:12px;padding:13px 16px;border-top:1px solid #EEF1F4}
-.nitem.un{background:#F4FAF8}
-.nic{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none}
-
+html{background:#F5F7F8}
+body{font-family:Inter,'Segoe UI',Arial,sans-serif;color:#1F2A37;background:#F5F7F8;font-size:13px;line-height:1.45}
 a{color:inherit;text-decoration:none}
-a.btn.p:hover{background:#174C46}a.btn.s:hover{background:#F4F7F8}
-a.cardlink{display:block}a.cardlink:hover{border-color:#9CC4BD}
-.nav a:hover{background:#F2F6F7}
-.dim{position:fixed;inset:0;background:rgba(17,28,36,.42)}
-.ovwrap{position:absolute;inset:0;display:flex;justify-content:center;align-items:center}
-.wave{display:flex;align-items:center;gap:3px;height:56px}
-.wave span{width:4px;border-radius:2px;background:#2B7A70}
-.mic{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(30,94,87,.28)}
-.hero{border-radius:16px;padding:24px 26px;color:#fff;background:linear-gradient(120deg,#1E5E57 0%,#2D7D72 55%,#3F8F84 100%)}
-.tile{border-radius:14px;padding:16px;border:1px solid transparent}
-.t-mint{background:#EAF5F2;border-color:#D3EAE4}.t-lav{background:#F1EEFB;border-color:#E2DCF6}.t-peach{background:#FFF3E6;border-color:#F8E0C4}.t-sky{background:#EAF2FC;border-color:#D6E4F7}
-.ti{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:#fff}
-.opt{flex:1;border:1.5px solid #D3DAE0;border-radius:12px;padding:14px;text-align:center;background:#fff}
-.opt.on{border-color:#1E5E57;background:#EAF5F2}
-.player{display:flex;align-items:center;gap:12px;border:1px solid #E4E9EC;border-radius:12px;padding:10px 14px;background:#fff}
-.pbtn{width:40px;height:40px;border-radius:50%;background:#1E5E57;display:flex;align-items:center;justify-content:center;flex:none}
-.bar{flex:1;height:6px;background:#E4E9EC;border-radius:3px;position:relative}
-.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#2B7A70}
-.tog{width:34px;height:20px;border-radius:10px;background:#1E5E57;position:relative;flex:none}
-.tog:after{content:"";position:absolute;right:3px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff}
-.tog.off{background:#C9D1D8}.tog.off:after{left:3px;right:auto}
-.thumb{width:150px;height:196px;border-radius:8px;background:#FBF8EF;border:1px solid #E9E2CC;padding:12px;font-family:'Segoe Print','Comic Sans MS',cursive;font-size:10px;color:#2B3A55}
-.bubble{max-width:560px;border-radius:12px;padding:12px 14px}
-</style></head><body><div style="width:1280px;min-height:832px;padding:56px 90px;background:#F5F7F8">
-<div class="brand" style="font-size:20px"><div class="lg" style="width:38px;height:38px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>LearnLens</div>
-<h1 style="font-size:32px;margin-top:26px;max-width:720px">From handwritten exam to clear, teacher-approved feedback</h1>
-<p class="sub" style="font-size:15px;max-width:720px">LearnLens reads scanned exams and suggests grades. The teacher checks every step, and students only see results their teacher has approved.</p>
-<div class="row" style="margin-top:30px"><a class="card cardlink" href="02_s_dash.html" data-to="s_dash" data-label="Omar Hassan card" style="flex:1"><div class="ti" style="background:#EAF5F2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-<div class="h2" style="margin-top:12px">Omar Hassan</div><div class="small muted">Student · Grade 4</div><p style="margin-top:8px">Upload this week's science quiz and follow your results.</p>
-<div class="small" style="margin-top:12px;color:#14504A;font-weight:600;display:flex;gap:6px;align-items:center">Open student view<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div></a>
-<a class="card cardlink" href="41_t_dash.html" data-to="t_dash" data-label="Ms. Nehal Kadous card" style="flex:1"><div class="ti" style="background:#EAF2FC"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-<div class="h2" style="margin-top:12px">Ms. Nehal Kadous</div><div class="small muted">Teacher · Grade 4 Science</div><p style="margin-top:8px">Check the scan, confirm grades and flags, and send feedback.</p>
-<div class="small" style="margin-top:12px;color:#14504A;font-weight:600;display:flex;gap:6px;align-items:center">Open teacher view<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div></a>
-<a class="card cardlink" href="80_p_home.html" data-to="p_home" data-label="Sara Hassan card" style="flex:1"><div class="ti" style="background:#FFF3E6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
-<div class="h2" style="margin-top:12px">Sara Hassan</div><div class="small muted">Parent</div><p style="margin-top:8px">See Omar's results, progress and messages from his teacher.</p>
-<div class="small" style="margin-top:12px;color:#14504A;font-weight:600;display:flex;gap:6px;align-items:center">Open parent view<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div></a></div>
-<div class="card" style="margin-top:22px;display:flex;gap:28px;align-items:center"><b>Later in the journey</b>
-<a class="btn s" href="19_s_dash_post.html" data-to="s_dash_post" data-label="Omar, after results are published">Omar, after results are published</a><a class="btn s" href="68_t_dash_done.html" data-to="t_dash_done" data-label="Ms. Nehal, after publishing">Ms. Nehal, after publishing</a><a class="btn s" href="70_t_voice.html" data-to="t_voice" data-label="Voice assessments">Voice assessments</a></div></div></body></html>
+.wrap{width:1280px;margin:0 auto;padding:0 72px}
+.topbar{display:flex;align-items:center;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px}
+.lg{width:36px;height:36px;border-radius:9px;background:#1E5E57;display:flex;align-items:center;justify-content:center}
+.topbar .r{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:12.5px;color:#5B6675}
+.pill{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-radius:14px;background:#fff;border:1px solid #E4E9EC;font-size:12px;color:#3D4855;font-weight:500}
+.hero{display:flex;gap:48px;align-items:center;padding:36px 0 44px}
+.hero .l{flex:1.05}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 12px;border-radius:14px;background:#E6F1EF;color:#14504A;font-weight:600;font-size:12px}
+h1{font-size:40px;line-height:1.14;font-weight:750;letter-spacing:-.6px;margin-top:18px}
+h1 em{font-style:normal;color:#1E5E57}
+.lead{font-size:16px;color:#4B5663;margin-top:16px;max-width:520px;line-height:1.55}
+.cta{display:flex;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 20px;border-radius:23px;font-weight:600;font-size:14px;border:1px solid transparent;white-space:nowrap;transition:background .15s,border-color .15s}
+.btn.p{background:#1E5E57;color:#fff;box-shadow:0 6px 16px rgba(30,94,87,.22)}
+.btn.p:hover{background:#174C46}
+.btn.s{background:#fff;color:#1F2A37;border-color:#D3DAE0}
+.btn.s:hover{background:#F4F7F8;border-color:#B9C4CC}
+.trust{display:flex;align-items:center;gap:9px;margin-top:26px;font-size:13px;color:#3D4855}
+/* hero visual */
+.vis{flex:.95;position:relative;height:480px}
+.vcard{position:absolute;background:#fff;border:1px solid #E4E9EC;border-radius:16px;box-shadow:0 16px 40px rgba(15,30,40,.08)}
+.v1{left:0;top:0;width:400px;padding:18px}
+.v2{right:0;top:222px;width:330px;padding:18px}
+.vh{display:flex;align-items:center;gap:8px;font-size:12px;color:#5B6675;font-weight:600}
+.scan{background:#FBF8EF;border:1px solid #E9E2CC;border-radius:10px;padding:14px 16px;margin-top:12px;font-family:'Segoe Print','Comic Sans MS',cursive;font-size:16px;color:#2B3A55;line-height:1.7}
+.mis{background:#FDF1DC;border-bottom:2px solid #E3A13B;padding:0 3px;border-radius:3px}
+.fix{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:12.5px}
+.strike{text-decoration:line-through;color:#8A5300}
+.chip{display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 9px;border-radius:12px;font-size:11.5px;font-weight:600}
+.c-teal{background:#E6F1EF;color:#14504A}.c-amber{background:#FFFBF2;color:#8A5300;border:1px solid #F0DDB4}.c-grey{background:#EEF1F4;color:#4B5563}
+.score{display:flex;align-items:baseline;gap:8px;margin-top:10px}
+.score b{font-size:38px;font-weight:750;letter-spacing:-.8px}
+.score span{color:#6B7684;font-size:14px}
+.qrow{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-top:1px solid #EEF1F4;font-size:12.5px}
+.qrow:first-of-type{border-top:0}
+.ok{display:flex;align-items:center;gap:8px;margin-top:12px;background:#EAF5F2;border-radius:10px;padding:9px 12px;color:#14504A;font-weight:600;font-size:12.5px}
+/* sections */
+.sec{padding:8px 0 40px}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
+.sh h2{font-size:20px;font-weight:700;letter-spacing:-.2px}
+.sh p{color:#5B6675;font-size:13px;margin-top:3px}
+.flow{display:flex;background:#fff;border:1px solid #E4E9EC;border-radius:16px;padding:8px}
+.fs{flex:1;display:block;padding:16px 16px 18px;border-radius:12px;position:relative;transition:background .15s}
+.fs:hover{background:#F4FAF8}
+.fs + .fs:before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:1px;background:#EEF1F4}
+.fn{display:flex;align-items:center;gap:10px}
+.num{width:26px;height:26px;border-radius:50%;background:#1E5E57;color:#fff;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.fi{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.ft{font-weight:650;font-size:14px;margin-top:12px}
+.fd{color:#5B6675;font-size:12.5px;margin-top:4px;min-height:36px}
+.fw{display:flex;align-items:center;gap:6px;margin-top:12px;font-size:11.5px;font-weight:600;color:#14504A}
+.roles{display:flex;gap:18px}
+.role{flex:1;background:#fff;border:1px solid #E4E9EC;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.rtop{padding:20px 20px 16px}
+.rhead{display:flex;align-items:center;gap:12px}
+.av{width:46px;height:46px;border-radius:50%;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;flex:none}
+.rn{font-weight:700;font-size:16px}
+.rr{font-size:12px;color:#6B7684}
+.rd{margin-top:12px;color:#3D4855;font-size:13.5px}
+.try{border-top:1px solid #EEF1F4;padding:8px 10px}
+.tl{font-size:10.5px;letter-spacing:.6px;text-transform:uppercase;color:#7A8592;font-weight:600;padding:8px 10px 4px}
+.ti{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;font-size:13px;color:#1F2A37;transition:background .15s}
+.ti:hover{background:#F2F6F7}
+.ti .go{margin-left:auto}
+.rfoot{margin-top:auto;padding:4px 20px 20px}
+.rfoot .btn{width:100%;justify-content:center;height:42px}
+.later{display:flex;gap:14px}
+.lc{flex:1;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #E4E9EC;border-radius:14px;padding:16px 18px;transition:border-color .15s,box-shadow .15s}
+.lc:hover{border-color:#9CC4BD;box-shadow:0 6px 18px rgba(15,30,40,.06)}
+.lc .t{font-weight:650;font-size:13.5px}
+.lc .d{color:#6B7684;font-size:12px;margin-top:2px}
+.lc .go{margin-left:auto}
+.foot{border-top:1px solid #E4E9EC;margin-top:8px;padding:20px 0 32px;display:flex;justify-content:space-between;color:#6B7684;font-size:12px}
+a:focus-visible{outline:3px solid #2B7A70;outline-offset:2px;border-radius:10px}
+</style></head><body>
+<div class="wrap">
+<header class="topbar"><div class="brand"><div class="lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>LearnLens</div>
+<div class="r"><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Grade 4 Science · Class 4A</span><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>English and German exams</span></div></header>
+
+<section class="hero"><div class="l">
+<span class="eyebrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Assessment support for Grades 1–5</span>
+<h1>From handwritten exam to clear, <em>teacher-approved</em> feedback</h1>
+<p class="lead">LearnLens reads scanned exams and suggests grades. The teacher checks every step, and students only see results their teacher has approved.</p>
+<div class="cta"><a class="btn p" href="02_s_dash.html" data-to="s_dash" data-label="Open student view">Open student view<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn s" href="41_t_dash.html" data-to="t_dash" data-label="Open teacher view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1F2A37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Open teacher view</a></div>
+<div class="trust"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Nothing reaches a student or parent until Ms. Nehal publishes it.</div>
+</div>
+
+<div class="vis" aria-hidden="true">
+<div class="vcard v1"><div class="vh"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Q2 · Omar's answer, page 1<span class="chip c-amber" style="margin-left:auto">1 word to check</span></div>
+<div class="scan">Plants need <span class="mis">waiter</span>, air and sunlite to make their food.</div>
+<div class="fix"><span class="strike">waiter</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7684" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg><b>water</b><span class="chip c-teal" style="margin-left:auto"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Reading fixed</span></div>
+<div class="fix" style="margin-top:8px;color:#5B6675"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7684" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>"sunlite" kept as Omar wrote it<span class="chip c-grey" style="margin-left:auto">Spelling kept</span></div></div>
+
+<div class="vcard v2"><div class="vh"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Science Quiz — Plant Life Cycles</div>
+<div class="score"><b>17</b><span>/ 20</span><span class="chip c-grey" style="margin-left:auto">Suggested 18</span></div>
+<div style="margin-top:8px"><div class="qrow"><span>Q4 · Life cycle stages</span><span><span class="strike" style="color:#6B7684">4</span> &nbsp;<b>3 / 4</b></span></div>
+<div class="qrow"><span>Red flag · photosynthesis</span><span class="chip c-teal">Confirmed</span></div></div>
+<div class="ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Checked and approved by Ms. Nehal</div></div>
+</div></section>
+
+<section class="sec"><div class="sh"><div><h2>How a quiz moves through LearnLens</h2><p>Every step the system suggests is checked by the teacher before it moves on. Click a step to open that screen.</p></div></div>
+<div class="flow">
+<a class="fs" href="03_s_upload.html" data-to="s_upload" data-label="Step 1 Upload My Exam"><div class="fn"><div class="num">1</div><div class="fi" style="background:#EAF5F2"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg></div></div><div class="ft">Omar uploads his quiz</div><div class="fd">Photos or a PDF of the handwritten pages.</div><div class="fw">Student · Submitted<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></div></a>
+<a class="fs" href="43_t_ocr1.html" data-to="t_ocr1" data-label="Step 2 Review Scan"><div class="fn"><div class="num">2</div><div class="fi" style="background:#EAF2FC"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg></div></div><div class="ft">Handwriting is read</div><div class="fd">Ms. Nehal checks the text and fixes reading errors.</div><div class="fw">Teacher · OCR review<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></div></a>
+<a class="fs" href="51_t_g1.html" data-to="t_g1" data-label="Step 3 Grade review"><div class="fn"><div class="num">3</div><div class="fi" style="background:#F1EEFB"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div></div><div class="ft">Grades are suggested</div><div class="fd">She confirms or changes each mark, with a reason.</div><div class="fw">Teacher · Grading review<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></div></a>
+<a class="fs" href="62_t_flag.html" data-to="t_flag" data-label="Step 4 Review feedback"><div class="fn"><div class="num">4</div><div class="fi" style="background:#FFF3E6"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg></div></div><div class="ft">Gaps and flags found</div><div class="fd">She confirms or dismisses red flags and practice.</div><div class="fw">Teacher · Awaiting approval<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></div></a>
+<a class="fs" href="21_s_results.html" data-to="s_results" data-label="Step 5 Results and feedback"><div class="fn"><div class="num">5</div><div class="fi" style="background:#EAF5F2"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></div></div><div class="ft">Results are shared</div><div class="fd">Omar and his parent see what she published.</div><div class="fw">Student · Published<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></div></a>
+</div></section>
+
+<section class="sec"><div class="sh"><div><h2>Choose a view</h2><p>Each view follows the same quiz from a different side.</p></div></div>
+<div class="roles">
+<div class="role"><div class="rtop"><div class="rhead"><div class="av" style="background:#EAF5F2;color:#14504A">OH</div><div><div class="rn">Omar Hassan</div><div class="rr">Student · Grade 4</div></div></div><p class="rd">Upload this week's science quiz and follow your results.</p></div><div class="try"><div class="tl">Things to try</div><a class="ti" href="03_s_upload.html" data-to="s_upload" data-label="Upload My Exam"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>Upload My Exam<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a><a class="ti" href="34_s_voice.html" data-to="s_voice" data-label="Voice Assessment"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>Voice Assessment<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a><a class="ti" href="38_s_tib.html" data-to="s_tib" data-label="Teach It Back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>Teach It Back<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a></div><div class="rfoot"><a class="btn p" href="02_s_dash.html" data-to="s_dash" data-label="Omar Hassan card">Open student view<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div>
+<div class="role"><div class="rtop"><div class="rhead"><div class="av" style="background:#EAF2FC;color:#14504A">NK</div><div><div class="rn">Ms. Nehal Kadous</div><div class="rr">Teacher · Grade 4 Science</div></div></div><p class="rd">Check the scan, confirm grades and flags, and send feedback.</p></div><div class="try"><div class="tl">Things to try</div><a class="ti" href="43_t_ocr1.html" data-to="t_ocr1" data-label="Review Scan"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Review Scan<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a><a class="ti" href="69_t_class.html" data-to="t_class" data-label="Class Analytics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Class Analytics<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a><a class="ti" href="78_t_de.html" data-to="t_de" data-label="German exam"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>Lena Bauer · German exam<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a></div><div class="rfoot"><a class="btn p" href="41_t_dash.html" data-to="t_dash" data-label="Ms. Nehal Kadous card">Open teacher view<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div>
+<div class="role"><div class="rtop"><div class="rhead"><div class="av" style="background:#FFF3E6;color:#14504A">SH</div><div><div class="rn">Sara Hassan</div><div class="rr">Parent</div></div></div><p class="rd">See Omar's results, progress and messages from his teacher.</p></div><div class="try"><div class="tl">Things to try</div><a class="ti" href="83_p_result.html" data-to="p_result" data-label="Quiz result"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Quiz result, question by question<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a><a class="ti" href="85_p_support.html" data-to="p_support" data-label="Support at home"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Support at home<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a><a class="ti" href="86_p_msgs.html" data-to="p_msgs" data-label="Messages"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Messages with Ms. Nehal<span class="go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA5B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></a></div><div class="rfoot"><a class="btn p" href="80_p_home.html" data-to="p_home" data-label="Sara Hassan card">Open parent view<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div>
+</div></section>
+
+<section class="sec"><div class="sh"><div><h2>Later in the journey</h2><p>Jump straight to a later point in the story.</p></div></div>
+<div class="later">
+<a class="lc" href="19_s_dash_post.html" data-to="s_dash_post" data-label="Omar, after results are published"><div class="fi" style="background:#EAF5F2"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div><div><div class="t">Omar, after results are published</div><div class="d">Results, feedback and practice are ready</div></div><span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+<a class="lc" href="68_t_dash_done.html" data-to="t_dash_done" data-label="Ms. Nehal, after publishing"><div class="fi" style="background:#EAF2FC"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div><div><div class="t">Ms. Nehal, after publishing</div><div class="d">Omar's quiz is done, the class queue moves on</div></div><span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+<a class="lc" href="70_t_voice.html" data-to="t_voice" data-label="Voice assessments"><div class="fi" style="background:#F1EEFB"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#14504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></div><div><div class="t">Voice assessments</div><div class="d">Create one and review spoken answers</div></div><span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B7A70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+</div></section>
+
+<footer class="foot"><span>All names, grades and answers are fictional sample data. OCR, grading and flags are simulated.</span><span>CSEN 909 Human Computer Interaction · Team Five Stars</span></footer>
+</div>
+</body></html>
