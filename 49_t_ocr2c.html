@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>Teacher - OCR verify Q2 (corrected) · LearnLens</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,'Segoe UI',Arial,sans-serif;color:#1F2A37;background:#F5F7F8;font-size:13px;line-height:1.45;width:1280px}
+.app{display:flex;width:1280px;min-height:832px}
+.side{width:224px;background:#fff;border-right:1px solid #E4E9EC;padding:18px 14px;display:flex;flex-direction:column;flex:none}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;margin-bottom:22px;padding-left:4px}
+.brand .lg{width:30px;height:30px;border-radius:8px;background:#1E5E57;display:flex;align-items:center;justify-content:center}
+.navlabel{font-size:10px;letter-spacing:.7px;color:#7A8592;font-weight:600;margin:0 0 8px 6px}
+.nav a{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;color:#3D4855;text-decoration:none;font-size:13px;margin-bottom:2px}
+.nav a.on{background:#E6F1EF;color:#14504A;font-weight:600}
+.side .foot{margin-top:auto;font-size:12px;color:#5B6675;display:flex;gap:8px;align-items:center;padding:8px 6px}
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.top{height:56px;background:#fff;border-bottom:1px solid #E4E9EC;display:flex;align-items:center;padding:0 28px;gap:12px}
+.crumb{font-size:12.5px;color:#6B7684;display:flex;align-items:center;gap:6px}
+.crumb b{color:#1F2A37;font-weight:600}
+.top .r{margin-left:auto;display:flex;align-items:center;gap:18px}
+.bell{display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3D4855;position:relative}
+.dot{position:absolute;left:10px;top:-3px;width:8px;height:8px;border-radius:50%;background:#C2410C;border:2px solid #fff}
+.who{display:flex;align-items:center;gap:9px}
+.av{width:32px;height:32px;border-radius:50%;background:#DDEDEA;color:#14504A;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center}
+.who .n{font-weight:600;font-size:12.5px;line-height:1.2}.who .s{font-size:11px;color:#6B7684}
+.page{padding:26px 28px 32px}
+h1{font-size:24px;font-weight:700;letter-spacing:-.2px}
+.sub{color:#5B6675;margin-top:4px;font-size:13px}
+.card{background:#fff;border:1px solid #E4E9EC;border-radius:12px;padding:18px}
+.row{display:flex;gap:16px}
+.col{display:flex;flex-direction:column;gap:16px}
+.h2{font-size:15px;font-weight:650;display:flex;align-items:center;gap:8px}
+.muted{color:#6B7684}.small{font-size:11.5px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:8px;font-weight:600;font-size:13px;border:1px solid transparent;white-space:nowrap}
+.btn.p{background:#1E5E57;color:#fff}
+.btn.s{background:#fff;color:#1F2A37;border-color:#D3DAE0}
+.btn.g{background:transparent;color:#14504A;padding:0 8px}
+.btn.d{background:#fff;color:#9F2D20;border-color:#E9C9C3}
+.chip{display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;border-radius:11px;font-size:11px;font-weight:600}
+.c-teal{background:#E6F1EF;color:#14504A}.c-amber{background:#FDF1DC;color:#8A5300}
+.c-red{background:#FBE7E3;color:#9F2D20}.c-grey{background:#EEF1F4;color:#4B5563}.c-blue{background:#E6EEFB;color:#244E99}
+.steps{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #E4E9EC;border-radius:10px;padding:10px 16px;font-size:12px;color:#5B6675;margin:18px 0}
+.steps .st{display:flex;align-items:center;gap:6px}.steps .st.done{color:#14504A;font-weight:600}.steps .st.now{color:#1F2A37;font-weight:700}
+.steps .ln{flex:1;height:1px;background:#DDE3E8}
+.tabs{display:flex;gap:6px}
+.tab{height:30px;padding:0 11px;border:1px solid #D3DAE0;border-radius:7px;display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;background:#fff}
+.tab.on{background:#E6F1EF;border-color:#1E5E57;color:#14504A}
+.lbl{font-size:11px;font-weight:600;color:#6B7684;letter-spacing:.3px;text-transform:uppercase;margin-bottom:5px}
+.box{border:1px solid #E4E9EC;border-radius:10px;padding:12px 14px;background:#FAFBFC}
+.hand{font-family:'Segoe Print','Comic Sans MS',cursive;font-size:17px;color:#2B3A55}
+.scan{background:#FBF8EF;border:1px solid #E9E2CC;border-radius:8px;padding:14px 16px}
+.kpi{flex:1}.kpi .v{font-size:26px;font-weight:700;margin-top:4px;letter-spacing:-.3px}.kpi .t{font-size:12px;color:#5B6675}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;font-size:11px;color:#6B7684;font-weight:600;padding:8px 10px;border-bottom:1px solid #E4E9EC;letter-spacing:.2px}
+td{padding:11px 10px;border-bottom:1px solid #EEF1F4;vertical-align:middle}
+.ta{width:100%;border:1px solid #CBD3DA;border-radius:8px;padding:10px 12px;font-size:13px;min-height:74px;background:#fff;color:#1F2A37}
+.field{display:flex;align-items:center;gap:8px}
+.inp{height:40px;border:1px solid #CBD3DA;border-radius:8px;display:flex;align-items:center;padding:0 12px;background:#fff;font-size:13px}
+.overlay{width:480px;background:#fff;border-radius:14px;border:1px solid #E4E9EC;box-shadow:0 18px 50px rgba(15,30,40,.18);padding:22px}
+.npanel{width:380px;background:#fff;border-radius:12px;border:1px solid #E4E9EC;box-shadow:0 18px 50px rgba(15,30,40,.16);overflow:hidden}
+.nitem{display:flex;gap:12px;padding:13px 16px;border-top:1px solid #EEF1F4}
+.nitem.un{background:#F4FAF8}
+.nic{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none}
+
+a{color:inherit;text-decoration:none}
+a.btn.p:hover{background:#174C46}a.btn.s:hover{background:#F4F7F8}
+a.cardlink{display:block}a.cardlink:hover{border-color:#9CC4BD}
+.nav a:hover{background:#F2F6F7}
+.dim{position:fixed;inset:0;background:rgba(17,28,36,.42)}
+.ovwrap{position:absolute;inset:0;display:flex;justify-content:center;align-items:center}
+.wave{display:flex;align-items:center;gap:3px;height:56px}
+.wave span{width:4px;border-radius:2px;background:#2B7A70}
+.mic{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(30,94,87,.28)}
+.hero{border-radius:16px;padding:24px 26px;color:#fff;background:linear-gradient(120deg,#1E5E57 0%,#2D7D72 55%,#3F8F84 100%)}
+.tile{border-radius:14px;padding:16px;border:1px solid transparent}
+.t-mint{background:#EAF5F2;border-color:#D3EAE4}.t-lav{background:#F1EEFB;border-color:#E2DCF6}.t-peach{background:#FFF3E6;border-color:#F8E0C4}.t-sky{background:#EAF2FC;border-color:#D6E4F7}
+.ti{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:#fff}
+.opt{flex:1;border:1.5px solid #D3DAE0;border-radius:12px;padding:14px;text-align:center;background:#fff}
+.opt.on{border-color:#1E5E57;background:#EAF5F2}
+.player{display:flex;align-items:center;gap:12px;border:1px solid #E4E9EC;border-radius:12px;padding:10px 14px;background:#fff}
+.pbtn{width:40px;height:40px;border-radius:50%;background:#1E5E57;display:flex;align-items:center;justify-content:center;flex:none}
+.bar{flex:1;height:6px;background:#E4E9EC;border-radius:3px;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#2B7A70}
+.tog{width:34px;height:20px;border-radius:10px;background:#1E5E57;position:relative;flex:none}
+.tog:after{content:"";position:absolute;right:3px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff}
+.tog.off{background:#C9D1D8}.tog.off:after{left:3px;right:auto}
+.thumb{width:150px;height:196px;border-radius:8px;background:#FBF8EF;border:1px solid #E9E2CC;padding:12px;font-family:'Segoe Print','Comic Sans MS',cursive;font-size:10px;color:#2B3A55}
+.bubble{max-width:560px;border-radius:12px;padding:12px 14px}
+</style></head><body><div class="app"><aside class="side"><div class="brand"><div class="lg"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>LearnLens</div>
+<div class="navlabel">TEACHER WORKSPACE</div><nav class="nav"><a class="" href="41_t_dash.html" data-to="t_dash" data-label="Side menu: Dashboard"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg><span>Dashboard</span></a><a class="on" href="44_t_ocr2.html" data-to="t_ocr2" data-label="Side menu: OCR Verification"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg><span>OCR Verification</span></a><a class="" href="51_t_g1.html" data-to="t_g1" data-label="Side menu: Grading Review"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg><span>Grading Review</span></a><a class="" href="70_t_voice.html" data-to="t_voice" data-label="Side menu: Voice Assessments"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg><span>Voice Assessments</span></a><a class="" href="62_t_flag.html" data-to="t_flag" data-label="Side menu: Learning Gaps &amp; Practice"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span>Learning Gaps &amp; Practice</span></a><a class="" href="69_t_class.html" data-to="t_class" data-label="Side menu: Class Analytics"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg><span>Class Analytics</span></a></nav>
+<div class="foot"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Help &amp; accessibility</div></aside>
+<div class="main"><header class="top"><div class="crumb">Grade 4 Science <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m9 18 6-6-6-6"/></svg> <b>OCR Verification</b></div>
+<div class="r"><a class="bell" href="42_t_notif.html" data-to="t_notif" data-label="Notification bell"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="dot"></span><span>2 new</span></a><a class="who" href="01_start.html" data-to="start" data-label="Profile menu (switch view)"><div class="av">NK</div><div><div class="n">Nehal Kadous</div><div class="s">Science teacher · Class 4A</div></div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7684" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m6 9 6 6 6-6"/></svg></a></div></header><div class="page"><div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px"><div><h1>Verify the handwritten answers</h1><p class="sub">Compare the scan with the extracted text and correct any reading errors before grading.</p></div></div><div class="steps"><div class="st done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E5E57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Submitted</div><div class="ln"></div><div class="st now"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F2A37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>OCR review</div><div class="ln"></div><div class="st "><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9AA4AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Grading review</div><div class="ln"></div><div class="st "><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9AA4AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Awaiting approval</div><div class="ln"></div><div class="st "><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9AA4AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Published</div></div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><div><div class="h2">Science Quiz — Plant Life Cycles</div>
+<div class="small muted">Omar Hassan · Grade 4 · Class 4A · Exam language: English</div></div><span class="chip c-teal"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg>5 of 5 answers verified</span></div>
+<div class="row"><div class="card" style="flex:1"><div style="display:flex;justify-content:space-between"><div class="h2">Original scan · page 1</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></div>
+<div class="scan" style="margin-top:10px"><div class="small muted">2. What do plants need to make food and grow?</div><div class="hand" style="margin-top:4px">Plants need sunlite and water to make food and grow.</div></div>
+<p class="small muted" style="margin-top:8px">The scan never changes. Omar's own spelling is kept.</p></div>
+<div class="card" style="flex:1"><div style="display:flex;justify-content:space-between;align-items:center"><div class="tabs"><a class="tab" href="43_t_ocr1.html" data-to="t_ocr1" data-label="Q1 tab">Q1 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E5E57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg></a><a class="tab on" href="44_t_ocr2.html" data-to="t_ocr2" data-label="Q2 tab">Q2 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E5E57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg></a><a class="tab" href="45_t_ocr3.html" data-to="t_ocr3" data-label="Q3 tab">Q3 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E5E57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg></a><a class="tab" href="46_t_ocr4.html" data-to="t_ocr4" data-label="Q4 tab">Q4 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E5E57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg></a><a class="tab" href="47_t_ocr5.html" data-to="t_ocr5" data-label="Q5 tab">Q5 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E5E57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg></a></div><span class="small muted">Question 2 of 5</span></div>
+<div class="lbl" style="margin-top:14px">Q2 · Extracted text</div><div class="small muted" style="margin-bottom:6px">What do plants need to make food and grow?</div><div class="box" style="font-size:16px;background:#fff">Plants need sunlite and <span style="background:#E6F1EF;padding:0 2px">water</span> to make food and grow.</div><div class="small" style="margin-top:10px;display:flex;gap:6px;color:#14504A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E5E57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Changed "waiter" to "water" · saved by you, 9:24 AM</div></div></div>
+<div style="display:flex;justify-content:space-between;margin-top:18px"><div style="display:flex;gap:8px"><a class="btn s" href="43_t_ocr1.html" data-to="t_ocr1" data-label="Previous question"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Previous question</a><a class="btn s" href="45_t_ocr3.html" data-to="t_ocr3" data-label="Next question">Next question<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div><a class="btn p" href="50_t_ocr_done.html" data-to="t_ocr_done" data-label="Save corrections"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg>Save corrections</a></div></div></div></div></body></html>
