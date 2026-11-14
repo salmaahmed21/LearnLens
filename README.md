@@ -38,7 +38,7 @@ Optional: run a local server with `python3 -m http.server 8000` in this folder, 
    - Class Analytics: 24 students, averages by topic, the term trend, and students who may need support.
    - Voice: create a voice assessment (English or German), then review an answer with audio playback and transcript correction.
    - Edit the AI practice questions, and approve Omar's practice (Approve practice feedback).
-   - Review a German (Deutsch) exam.
+   - Omar's German (Deutsch) exam: on the dashboard, click Review Scan on his Sachunterricht-Quiz row, fix the misread word "Wurtzeln" (his own spelling "Sonenlicht" stays), review the grade (14 / 16) and publish it. Omar then sees both results under Results & Feedback.
 5. **Parent view:**
    - an overview, with notifications from the bell
    - all results, and one quiz question by question
@@ -49,14 +49,19 @@ Optional: run a local server with `python3 -m http.server 8000` in this folder, 
 
 ## Structure
 - `index.html`: the start screen
-- `01_start.html` to `88_p_settings.html`: one self-contained page per screen. The CSS is inline and the icons are inline SVG ([Lucide](https://lucide.dev), ISC licence).
+- `01_start.html` to `92_p_settings.html`: one self-contained page per screen. The CSS is inline and the icons are inline SVG ([Lucide](https://lucide.dev), ISC licence).
 
 ## Notes
 - All names, grades and answers are fictional sample data.
 - OCR, grading, flags and transcripts are hard-coded to simulate AI output.
 
+## Screenshots
+`docs/screenshots/` has a picture of every screen (01 to 92), in the same order as the pages.
+
 ## Put it on GitHub
 1. On github.com, click **New repository**, give it a name (for example `learnlens-frontend`), make it **Public**, and click **Create repository**.
 2. On the new page, click **uploading an existing file**.
-3. Unzip this folder and open it. Select all the files (the `.html` files and `README.md`), drag them into the browser window, and click **Commit changes**.
+3. Unzip this folder and open it. GitHub accepts up to 100 files per upload, so upload in two rounds:
+   - Round 1: select all the files in the main folder (the `.html` files and `README.md`, not the `docs` folder), drag them into the browser window, and click **Commit changes**.
+   - Round 2: click **Add file → Upload files**, drag the whole `docs` folder in, and click **Commit changes**.
 4. Turn on GitHub Pages (see "Deploy with GitHub Pages" above) and add the live link to the submission.
